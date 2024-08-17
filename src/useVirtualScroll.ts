@@ -6,7 +6,7 @@ interface Item {
 }
 
 interface UseVirtualScrollProps<T extends Item> {
-  fetchItems: (page: number) => Promise<T[]>;
+  fetchItems: (page: number, itemsPerPage: number) => Promise<T[]>;
   initialItems?: T[];
   itemsPerPage?: number;
   threshold?: number;
@@ -35,16 +35,16 @@ function useVirtualScroll<T extends Item>({
     if (isLoading) return;
     setIsLoading(true);
     try {
-      const newItems = await fetchItems(page);
-      setAllItems((prevItems) => [...prevItems, ...newItems]);
+      const newItems = await fetchItems(page, itemsPerPage);
+      setAllItems((prevItems: T[]) => [...prevItems, ...newItems]);
       setNewLoadedItems(newItems);
-      setPage((prevPage) => prevPage + 1);
+      setPage((prevPage: number) => prevPage + 1);
     } catch (error) {
       console.error("Error fetching items:", error);
     } finally {
       setIsLoading(false);
     }
-  }, [fetchItems, page, isLoading]);
+  }, [fetchItems, page, isLoading, itemsPerPage]);
 
   const handleScroll = useCallback(() => {
     if (!containerRef.current) return;

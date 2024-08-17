@@ -65,7 +65,7 @@ function useVirtualScroll(_a) {
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 3, 4, 5]);
-                    return [4 /*yield*/, fetchItems(page)];
+                    return [4 /*yield*/, fetchItems(page, itemsPerPage)];
                 case 2:
                     newItems_1 = _a.sent();
                     setAllItems(function (prevItems) { return __spreadArray(__spreadArray([], prevItems, true), newItems_1, true); });
@@ -82,7 +82,7 @@ function useVirtualScroll(_a) {
                 case 5: return [2 /*return*/];
             }
         });
-    }); }, [fetchItems, page, isLoading]);
+    }); }, [fetchItems, page, isLoading, itemsPerPage]);
     var handleScroll = (0, react_1.useCallback)(function () {
         if (!containerRef.current)
             return;

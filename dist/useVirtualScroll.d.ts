@@ -1,9 +1,10 @@
+/// <reference types="react" />
 interface Item {
     id: string | number;
     [key: string]: any;
 }
 interface UseVirtualScrollProps<T extends Item> {
-    fetchItems: (page: number) => Promise<T[]>;
+    fetchItems: (page: number, itemsPerPage: number) => Promise<T[]>;
     initialItems?: T[];
     itemsPerPage?: number;
     threshold?: number;
