@@ -1,7 +1,7 @@
 {
   "name": "virtual-scroll-library",
-  "version": "1.0.1",
-  "description": "A React hook for implementing virtual scrolling",
+  "version": "1.1.1",
+  "description": "A lightweight and efficient React hook for implementing virtual scrolling with infinite loading capabilities",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -11,9 +11,24 @@
   "keywords": [
     "react",
     "virtual-scroll",
-    "infinite-scroll"
+    "infinite-scroll",
+    "performance",
+    "optimization",
+    "react-hook",
+    "typescript",
+    "lazy-loading",
+    "ui",
+    "frontend"
   ],
   "author": "Muhammad Husnain",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/husnain129/virtual-scroll-library"
+  },
+  "bugs": {
+    "url": "https://github.com/husnain129/virtual-scroll-library/issues"
+  },
+  "homepage": "https://github.com/husnain129/virtual-scroll-library#readme",
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
