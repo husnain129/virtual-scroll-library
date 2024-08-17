@@ -1,6 +1,6 @@
 {
   "name": "virtual-scroll-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React hook for implementing virtual scrolling",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -46,6 +46,20 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = require("react");
+/**
+ * useVirtualScroll: A custom React hook for implementing virtual scrolling
+ *
+ * This hook manages the loading and display of items in a scrollable container,
+ * fetching new items as the user scrolls and approaching the end of the current content.
+ *
+ * @template T - The type of items being scrolled, must extend the Item interface
+ * @param {UseVirtualScrollProps<T>} props - Configuration options for the virtual scroll
+ * @param {function} props.fetchItems - Function to fetch more items. It should accept a page number and items per page, and return a Promise resolving to an array of items.
+ * @param {T[]} [props.initialItems=[]] - Initial items to populate the list. Use this if you have items to display immediately.
+ * @param {number} [props.itemsPerPage=10] - Number of items to fetch in each batch. Adjust this based on your UI and performance needs.
+ * @param {number} [props.threshold=200] - Distance from bottom of the container (in pixels) at which to trigger loading more items.
+ * @returns {UseVirtualScrollResult<T>} An object containing the scroll state and ref
+ */
 function useVirtualScroll(_a) {
     var _this = this;
     var fetchItems = _a.fetchItems, _b = _a.initialItems, initialItems = _b === void 0 ? [] : _b, _c = _a.itemsPerPage, itemsPerPage = _c === void 0 ? 10 : _c, _d = _a.threshold, threshold = _d === void 0 ? 200 : _d;
