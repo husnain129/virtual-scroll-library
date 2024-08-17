@@ -2,6 +2,16 @@
 
 A React hook for implementing virtual scrolling with infinite loading capabilities.
 
+## Demo
+
+Check out the live demo of the Virtual Scroll Library in action:
+[Virtual Scroll Library Demo](https://virtual-scroll-library-demo.vercel.app)
+
+## GitHub Repository
+
+For the latest updates, issue reporting, and contribution guidelines, please visit our GitHub repository:
+[Virtual Scroll Library on GitHub](https://github.com/husnain129/virtual-scroll-library)
+
 ## Installation
 
 You can install the Virtual Scroll Library using npm or yarn:
